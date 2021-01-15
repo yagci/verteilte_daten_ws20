@@ -1,82 +1,83 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            display: inline-block;
+            margin: 0;
+            margin-top: 50px;
+            padding: 0;
+        }
 
-div {
-	display: inline-block;
-    margin: 0;
-    margin-top: 50px;
-    padding: 0;
-}
+        .triangle-up {
+            margin-left: 150px;
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 150px solid #f80;
+            transition: 1s
+        }
 
-.triangle-up {
-	margin-left: 150px;
-	width: 0;
-	height: 0;
-	border-left: 200px solid transparent;
-	border-right: 200px solid transparent;
-	border-bottom: 150px solid #f80;
-    transition: 1s
-}
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-top: 150px solid #f80;
+            margin-left: -205px;
+            transition: 1s
+        }
 
-.triangle-down {
-	width: 0;
-	height: 0;
-	border-left: 200px solid transparent;
-	border-right: 200px solid transparent;
-	border-top: 150px solid #f80;
-    margin-left: -205px;
-    transition: 1s
-}
+        .area:hover .triangle-down {
+            margin-left: 215px;
+            transition: 1s;
+            margin-top: -20px;
+        }
 
-.area:hover .triangle-down {
-	margin-left: 215px;
-    transition: 1s;
-    margin-top: -20px;
-}
+        .area:hover .triangle-up {
+            margin-left: 0px;
+            transition: 1s
+        }
 
-.area:hover .triangle-up {
-	margin-left: 0px;
-    transition: 1s
-}
+        .area:hover .msg {
+            opacity: 1;
+            transition-delay: .5s;
+            transition-duration: .3s;
+        }
 
-.area:hover .msg {
-	opacity: 1;
-    transition-delay: .5s;
-    transition-duration: .3s;
-}
+        .msg {
+            display: inline;
+            font-family: arial;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-size: 24px;
+            opacity: 0;
+            margin-left: -25px;
+            position: fixed;
+            margin-top: 115px;
+            transition-duration: .3s;
+        }
 
-.msg {
-	display: inline;
-    font-family: arial;
-    font-weight: bold;
-    letter-spacing: 5px;
-    font-size: 24px;
-    opacity: 0;
-    margin-left: -25px;
-    position: fixed;
-    margin-top: 115px;
-    transition-duration: .3s;
-}
-
-.msg a {
-	color: #f80;
-    border: 3px dashed #f80;
-    padding: 10px;
-    text-decoration:none;
-}
-
-</style>
+        .msg a {
+            color: #f80;
+            border: 3px dashed #f80;
+            padding: 10px;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="area">
-  <div class="triangle-up"></div>
-  <p class="msg"><a href="#">SURPRISE LINK</a></p>
-  <div class="triangle-down"></div>
-</div>
+    <div class="area">
+        <div class="triangle-up"></div>
+        <p class="msg"><a href="#">SURPRISE LINK</a></p>
+        <div class="triangle-down"></div>
+    </div>
 
 </body>
-</html> 
+
+</html>

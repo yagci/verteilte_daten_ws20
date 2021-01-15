@@ -40,7 +40,7 @@ function make_list2(data, selector, id) {
 make_list(navigatorInfo, '#navigator', 'navigator-list');
 
 let uri = "https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations.json";
-d3.json(uri, function(data) {
+d3.json(uri, function (data) {
     let dt = data.slice(1, 10);
     console.log(dt);
     for (var i = 0; i < dt.length; i++) {
