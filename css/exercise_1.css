@@ -98,3 +98,8 @@ p.color {
     letter-spacing: .2rem;
     font-weight: 600;
 }
+
+.list-group, .table {
+    font-size: .9rem;
+    text-transform:capitalize;
+}
